@@ -1,0 +1,144 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Page</title>
+
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
+        <link rel="stylesheet" href="home.css">
+
+        <style>
+            body{
+            margin: 0;
+            padding: 0;
+            background: url(img/bg1.jpg);
+            background-size: cover;
+            background-position: center;
+          }
+            .owner img{
+                margin-left: 50px;
+                padding: 0;
+                border-radius: 50%;
+            }
+
+            .owner a{
+                color: black;
+            }
+
+            .owner a:hover{
+                color: black;
+                transition: 0.3s ease;
+            }
+            
+
+        </style>
+    </head>
+
+    <body>
+
+        <!--NAVIGATION-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+          <div class="container">
+            <i>Shopped In</i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span><i id="bar" class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Shop.php">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="cart.php">Cart <span id="cart-item" class="badge badge-danger"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.php">Logout</a>
+                </li>
+              </ul> 
+            </div>
+          </div>
+        </nav>
+
+        <section id="about" class="my-5 py-5">
+          <div class="container mt-1">
+            <h1>Our Contacts</h1> 
+            <hr>
+            <div class="face container my-5 py-5">
+                <h4>Leave message in our Facebook Page</h4>
+                <a href="https://www.facebook.com/Shopped-in-102498641737072/">Shopped In</a>
+                <div class="owner py-3">
+                    <h4>Direct message to</h4>
+                    <img src="img/icons/owner.jpg"><br>
+                    <a href="https://www.facebook.com/profile.php?id=100039135698512">Gerallyn Marbella Morcilla</a>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="mt-2 py-3">
+            <div class="row container mx-auto pt-5">
+                <div class="footer-one col-lg-4 col-md-6 col-12 mb-5">
+                    <img src="img/icons/logo.jpg">
+                </div>
+                <div class="footer-one col-lg-4 col-md-6 col-12 mb-5">
+                    <h5>Contact Us</h5>
+                    <div>
+                        <h6 class="text-uppercase">Address</h6>
+                        <p>Las Piñas City</p>
+                    </div>
+                    <div>
+                        <h6 class="text-uppercase">Phone</h6>
+                        <p>09174458855</p>
+                    </div>
+                    <div>
+                        <h6 class="text-uppercase">Email</h6>
+                        <p>geralynmorcilla@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-one col-lg-4 col-md-6 col-12 mb-5">
+                    <h5>Follow Us:</h5>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/Shopped-in-102498641737072/"><i class="fab fa-facebook"></i></a>    
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+
+        <script type="text/javascript">
+            // Load total no.of items added in the cart and display in the navbar
+            load_cart_item_number();
+
+            function load_cart_item_number() {
+            $.ajax({
+                url: 'action.php',
+                method: 'get',
+                data: {
+                cartItem: "cart_item"
+                },
+                success: function(response) {
+                $("#cart-item").html(response);
+                }
+            });
+            }
+
+        </script>
+    
+      </body>
+
+</html>
