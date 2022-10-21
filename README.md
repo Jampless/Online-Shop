@@ -7,3 +7,6 @@ Simple Online Shop using php
 - 📫 How to reach me at jake.longares192@gmail.com 
 
 you can use this as a reference of your project
+
+download all images here
+https://drive.google.com/drive/folders/1u7KiL4bZarOZTWf2Vh8VQloBIFWYi2Rk?usp=sharing
